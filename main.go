@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"my-go-sandbox/controllers"
 	"my-go-sandbox/models"
+	"net/http"
 )
 
 const (
@@ -74,8 +76,10 @@ func main() {
 		"sadas",
 	}
 	fmt.Println(u2)
+	startWebServer()
 }
 
-func startWebServer(port int) (int, error) {
-	return port, nil
+func startWebServer() {
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3535", nil)
 }

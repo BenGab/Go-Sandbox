@@ -9,7 +9,7 @@ type usercontroller struct {
 	IdPattern *regexp.Regexp
 }
 
-func (uc usercontroller) seveHTTP(w http.ResponseWriter, r *http.Request) {
+func (uc usercontroller) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Hello from user controller"))
 }
 
