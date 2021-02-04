@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"my-go-sandbox/models"
+)
 
 const (
 	first  = 1
@@ -60,20 +63,13 @@ func main() {
 	m := map[string]int{"foo": 45}
 	fmt.Println(m)
 
-	//struct
-	type User struct {
-		ID        int
-		Firstname string
-		LastName  string
-	}
-
-	var u User
+	var u models.User
 	u.ID = 1
 	u.Firstname = "ARt"
 	u.LastName = "sda"
 	fmt.Println(u)
 
-	u2 := User{2,
+	u2 := models.User{2,
 		"dasd",
 		"sadas",
 	}
