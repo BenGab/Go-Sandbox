@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 const (
 	first  = 1
 	second = iota
@@ -11,47 +13,50 @@ const (
 func main() {
 	var i int
 	i = 42
-	println(i)
+	fmt.Println(i)
 
 	var ptif = 3.14
-	println(ptif)
+	fmt.Println(ptif)
 
 	firstName := "Me"
-	println(firstName)
+	fmt.Println(firstName)
 
 	c := complex(3, 4)
-	println(c)
+	fmt.Println(c)
 
 	im, re := imag(c), real(c)
 
-	println(im, re)
+	fmt.Println(im, re)
 
 	var name *string = new(string)
 	*name = "Gabe"
-	println(*name)
+	fmt.Println(*name)
 
 	namePtr := &firstName
-	println(namePtr, *namePtr)
+	fmt.Println(namePtr, *namePtr)
 
 	const pi = 3.14
-	print(pi)
-	println(first, second, third, fourth, shift)
+	fmt.Println(pi)
+	fmt.Println(first, second, third, fourth, shift)
 
 	//arrays
 	var arr [3]int
 	arr[0] = 1
 	arr[1] = 2
 	arr[2] = 3
-	println(arr[0], arr[1], arr[2])
+	fmt.Println(arr)
 
 	arr2 := [3]int{1, 2, 3}
-	println(arr2[0])
-
+	fmt.Println(arr2)
+	//slices
 	slice := []int{1, 2, 3}
-	println(slice)
 
 	slice = append(slice, 4, 5, 6)
-	println(slice)
+
 	s1 := slice[1:]
-	print(s1)
+	fmt.Println(s1)
+
+	//map
+	m := map[string]int{"foo": 45}
+	fmt.Println(m)
 }
