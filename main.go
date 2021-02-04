@@ -20,4 +20,11 @@ func main() {
 	im, re := imag(c), real(c)
 
 	println(im, re)
+
+	var name *string = new(string)
+	*name = "Gabe"
+	println(*name)
+
+	namePtr := &firstName
+	println(namePtr, *namePtr)
 }
