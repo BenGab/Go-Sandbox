@@ -46,4 +46,12 @@ func main() {
 
 	arr2 := [3]int{1, 2, 3}
 	println(arr2[0])
+
+	slice := []int{1, 2, 3}
+	println(slice)
+
+	slice = append(slice, 4, 5, 6)
+	println(slice)
+	s1 := slice[1:]
+	print(s1)
 }
