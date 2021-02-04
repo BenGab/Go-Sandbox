@@ -1,12 +1,17 @@
 package main
 
+const (
+	first  = 1
+	second = iota
+	third
+	fourth = iota + 6
+	shift  = 2 << iota
+)
+
 func main() {
 	var i int
 	i = 42
 	println(i)
-
-	var pi float32 = 3.14
-	println(pi)
 
 	var ptif = 3.14
 	println(ptif)
@@ -27,4 +32,8 @@ func main() {
 
 	namePtr := &firstName
 	println(namePtr, *namePtr)
+
+	const pi = 3.14
+	print(pi)
+	println(first, second, third, fourth, shift)
 }
