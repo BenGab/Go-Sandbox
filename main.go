@@ -75,3 +75,7 @@ func main() {
 	}
 	fmt.Println(u2)
 }
+
+func startWebServer(port int) (int, error) {
+	return port, nil
+}
