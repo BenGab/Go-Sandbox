@@ -36,4 +36,14 @@ func main() {
 	const pi = 3.14
 	print(pi)
 	println(first, second, third, fourth, shift)
+
+	//arrays
+	var arr [3]int
+	arr[0] = 1
+	arr[1] = 2
+	arr[2] = 3
+	println(arr[0], arr[1], arr[2])
+
+	arr2 := [3]int{1, 2, 3}
+	println(arr2[0])
 }
