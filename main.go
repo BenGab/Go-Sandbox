@@ -59,4 +59,23 @@ func main() {
 	//map
 	m := map[string]int{"foo": 45}
 	fmt.Println(m)
+
+	//struct
+	type User struct {
+		ID        int
+		Firstname string
+		LastName  string
+	}
+
+	var u User
+	u.ID = 1
+	u.Firstname = "ARt"
+	u.LastName = "sda"
+	fmt.Println(u)
+
+	u2 := User{2,
+		"dasd",
+		"sadas",
+	}
+	fmt.Println(u2)
 }
